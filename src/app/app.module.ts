@@ -19,12 +19,16 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { FooterComponent } from './footer/footer.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    DialogComponent
+    DialogComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatPaginatorModule,
     MatSortModule,
     DragDropModule,
+   
+   
     
     
   ],
