@@ -3,15 +3,21 @@
 <div mat-dialog-content>
     <mat-form-field appearance="outline">
             <input formControlName="email" matInput placeholder="Enter your email address">
+            <mat-error *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+              Please enter a valid email address
+            </mat-error>
       </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Enter your password</mat-label>
         <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <mat-error *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+          Password should be minimum 5 characters
+        </mat-error>
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
     </mat-form-field>
-    
+   
 </div>
 <div mat-dialog-action [align]="'center'">
     <button class="btn1" mat-raised-button color="warn" (click)="login()">{{actionBtn}}</button>
