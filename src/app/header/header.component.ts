@@ -25,7 +25,6 @@ export class HeaderComponent  {
     this.getAllLoginDetails();
   }
   
-  
   openLogin() {
     this.login.open(LoginComponent, {
       width: "30%"

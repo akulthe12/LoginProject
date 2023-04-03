@@ -1,0 +1,44 @@
+
+<form [formGroup]="lnForm">
+    <div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput name="email" MatFormFieldControl="email"    formControlName="email" matInput placeholder="Enter your email address">
+      <mat-error *ngIf="lnForm.controls['email'].invalid && (lnForm.controls['email'].dirty || lnForm.controls['email'].touched)  " class="text-danger">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>&nbsp;
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="enter valid password" name="password"  MatFormFieldControl="password" formControlName="password">
+      <mat-error *ngIf="lnForm.controls['password'].invalid && (lnForm.controls['password'].dirty || lnForm.controls['password'].touched) ">
+        Please enter a valid password 
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input matInput name="phone" MatFormFieldControl="phone" formControlName="phone" placeholder="Enter your phone number">
+        <mat-error *ngIf="lnForm.controls['phone'].invalid && (lnForm.controls['phone'].dirty || lnForm.controls['phone'].touched)">
+          Please enter a valid phone number
+        </mat-error>
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline">
+        <mat-label>OTP Code</mat-label>
+        <input matInput name="otp" MatFormFieldControl="otp" formControlName="otp" placeholder="Enter the OTP code">
+        <mat-error *ngIf="lnForm.controls['otp'].invalid && (lnForm.controls['otp'].dirty || lnForm.controls['otp'].touched)">
+          Please enter a valid OTP code
+        </mat-error>
+      </mat-form-field>
+      <div mat-dialog-action>
+      <button class="btn2" mat-raised-button color="primary" (click)="sendOTP()">Send OTP</button>
+      </div>
+    <div mat-dialog-action [align]="'center'">
+        
+
+        <button class="btn1" mat-raised-button color="primary" (click)="login()">Sign In</button>
+
+</div>
+    </div>
+</form>

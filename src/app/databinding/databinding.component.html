@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>  //one way data binding   //it only work for type string
+
+<br><br>
+
+
+<label>Enter name:</label>
+<input  [hidden]="show" type="text" name="nme" [value]="name">  //two way data binding :- it work for any kind of data typef//when i get {{show}} it not shwoing any thing
+
+<br>
+<br>
+<button type="button" style="color:rgb(46, 252, 46)" (click)="onShow()">Show</button>    //event binding+:- flow form component to view
+<input text="text" (keyup)="consoledata($event)">
+
+
+<br><br>
+
+<label for="">UserName</label>
+<input type="text" [(ngModel)]="userName">    //two way data binding.
+
+<h1>Hello....{{userName}}Welcome to my VSCode</h1>
+

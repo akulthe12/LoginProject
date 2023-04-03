@@ -1,0 +1,21 @@
+<table style=border:2px;>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>category</th>
+            <th>Product Image</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr *ngFor="let item of productlist; let i=index;">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}/th>
+           ?
+            <td>{{item.description}}</td>
+            <td>{{item.category}}</td>
+            <td><img style="width:120px;" src="{{item.image}}" alt=""></td>
+        </tr>
+    </tbody>

@@ -1,0 +1,37 @@
+<ul>
+    <li *ngFor="let emp of employeelist">
+        {{emp.name}}
+        {{emp.address}}
+        
+    </li>
+</ul>
+
+
+<p [ngStyle]="{'color': color}">This text will be red.</p>
+<button (click)="changeColor()">Change Color</button>
+
+
+<!-- [ngStyle]="{'font-style': styleExp}"> -->
+
+<button (click)="isActive()">Toggle active class</button>
+
+<div [ngClass]="{ 'active': isActive }">This element will have the 'active' class if isActive is true.</div>
+
+<div *ngIf="show">
+    <p>This my Structural directive</p>
+</div>
+<div *ngIf="employeelist.length==3">
+    <h1>Employee is avilable</h1>
+</div>
+
+
+<div *ngFor="let emp of employeelist">
+    <ul *ngIf="emp.salary>=40000 && emp.name=='pankaj'">
+        <li>{{emp.salary}}</li>
+        <li>{{emp.name}}</li>
+    </ul>
+
+
+
+
+</div>

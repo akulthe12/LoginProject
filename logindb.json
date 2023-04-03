@@ -1,7 +1,7 @@
 {
   "logindb": [
     {
-      "email": "renuka@gmail.com",
+      "email": "renu@gmail.com",
       "password": "78945678",
       "id": 2
     },
@@ -19,11 +19,6 @@
       "email": "abc@gmail.com",
       "password": "78945612",
       "id": 5
-    },
-    {
-      "email": "xyz@gmail.com",
-      "password": "78945612",
-      "id": 6
     },
     {
       "email": "ert@rediffmail.com",

@@ -10,17 +10,17 @@ export class ApiService {
 
   postLogin(data:any)
   {
-    return this.http.post<any>("http://localhost:3000/logindb/",data)
+    return this.http.post<any>("http://localhost:3000/empdb",data)
   }
 getLogin(){
-return this.http.get<any>("http://localhost:3000/logindb/");
+return this.http.get<any>("http://localhost:3000/empdb");
 }
 putDetails(data:any,id:number){
-  return this.http.put<any>("http://localhost:3000/logindb/"+id,data);
+  return this.http.put<any>("http://localhost:3000/empdb"+id,data);
 
 }
 deleteDetails(id:number)
 {
-  return this.http.delete<any>("http://localhost:3000/logindb/"+id)
+  return this.http.delete<any>("http://localhost:3000/empdb"+id)
 }
 }

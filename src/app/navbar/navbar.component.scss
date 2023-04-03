@@ -1,0 +1,16 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  body { 
+    padding-top: 65px; 
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+  body {
+      margin-top:100px;
+  }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+  body {
+      margin-top:50px;
+  }
+}

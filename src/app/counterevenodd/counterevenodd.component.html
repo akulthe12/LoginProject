@@ -1,0 +1,4 @@
+<button (click)="onClick()">Click me</button>
+<ul>
+  <li *ngFor="let number of numbers" [class.green]="number % 2 === 0" [class.red]="number % 2 !== 0">{{ number }}</li>
+</ul>
